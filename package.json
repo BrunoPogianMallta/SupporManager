@@ -1,0 +1,22 @@
+{
+  "name": "supportmanager",
+  "version": "1.0.0",
+  "description": "Support Manager",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"nodemon src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.16.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
