@@ -2,28 +2,32 @@ const Sequelize = require('sequelize');
 
 const db = require('../database');
 
-const User = db.define ('user',{
+const Notebooks = db.define ('notebook',{
       id:{
         type: Sequelize.STRING,
         primaryKey: true,
       },
-      user_name: {
+      notebook_serial:{
+        type: Sequelize.STRING,
+        allowNull:false,
+      },
+      notebook_model: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      email: {
+      notebook_config: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      password: {
+      purchase_date: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      is_admin: {
+      warranty: {
         type: Sequelize.BOOLEAN,
         allowNull: true,
       },
-      currentId:{
+      notebook_status:{
         type: Sequelize.STRING,
       },
     }, {
@@ -31,8 +35,8 @@ const User = db.define ('user',{
       timestamps: true,
     });
     
-    User.sync({ alter: true })
+    Notebooks.sync({ alter: true })
    
 
 
-module.exports = User;
+module.exports = Notebooks;

@@ -7,4 +7,11 @@ const sequelize = new Sequelize('supportmanager', 'postgres', 'postgres', {
     timezone:'-03:00'
   });
 
+  sequelize.authenticate()
+  .then(()=>{
+    console.log('Conexão com banco de dados realizada com sucesso!');
+  }).catch((err)=>{
+    console.log("Erro: Conexão com o bancode dados não realizada!Erro:"+err)
+  })
+
   module.exports = sequelize;
